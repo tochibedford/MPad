@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="container-fluid app">
+	<div class="movable">
+		<div class="tap">Tap once to go full screen</div>
+	</div>
+	<div class="footer" unselectable="on">
+		made by Tochi © 2020
+	</div>
+	<div class="portraitBlock">
+		<h1 class="bigWarn fakeLevitate text-center">App will only work in lanscape mode, Please rotate your device<i class="fas fa-sync-alt"></i></h1>
+	</div>
+	<div class="help fadeInRight">
+		<div class="iconI">
+			<i class="fas fa-times-circle"></i>
+		</div>
+		<div class="mainHelp">
+			<li>Make sure app is in full screen, for best experience</li>
+			<li>Single tap anywhere in dashed area to click</li>
+			<li>Tap with 3 fingers to take a screenshot</li>
+			<li>Use a single finger to move mouse</li>
+			<li>Use a 2 fingers to start mouse drag/select</li>
+			<li>have fun!</li>
+		</div>
+	</div>
+</div>
+{% endblock %}

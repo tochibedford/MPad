@@ -1,0 +1,233 @@
+:root{
+	--primary: #D2CBCB;
+	--primary-shade: #ADA0A6;
+	--primary-bright: #F9E7E7;
+	--primart-unBright: #DED6D6;
+	--primary-contrast: #7D938A;
+	
+	--secondary: #BA3F1D;
+
+	--tertiary: #A77E58;
+	--tertiary-bright:#EEE3AB;
+	--tertiary-shade: #6A2411;
+}
+
+@-webkit-keyframes fakeLevitate {
+    0% {
+        opacity: 0.6;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    50%{
+    	opacity: 1;
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1, 1);
+    }
+    100% {
+        opacity: 0.6;
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes fakeLevitate {
+    0% {
+        opacity: 0.6;
+        -webkit-transform: scale(0.7, 0.7);
+        transform: scale(0.7, 0.7);
+    }
+    50%{
+    	opacity: 1;
+        -webkit-transform: scale(0.8, 0.8);
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        opacity: 0.6;
+        -webkit-transform: scale(0.7, 0.7);
+        transform: scale(0.7, 0.7);
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+*{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+@-webkit-keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(95%, 0, 0);
+        transform: translate3d(95%, 0, 0);
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(95%, 0, 0);
+        transform: translate3d(95%, 0, 0);
+    }
+}
+
+*{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+body{
+	background-image: linear-gradient(225deg, var(--primary-bright), var(--primary), var(--primary-shade), var(--primary-contrast));
+	background-size: 150% 150%;
+	background-position: top right;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.fadeInRight {
+    opacity: 0;
+    -webkit-animation: fadeInRight ease-in 1;
+    -moz-animation: fadeInRight ease-in 1;
+    animation: fadeInRight ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.fadeOutRight{
+    -webkit-animation: fadeOutRight ease-in 1;
+    -moz-animation: fadeOutRight ease-in 1;
+    animation: fadeOutRight ease-in-out 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.fakeLevitate{
+	-webkit-animation-name: fakeLevitate;
+    animation-name: fakeLevitate;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.5, 1, 0);
+    animation-iteration-count: infinite;
+}
+
+.warn, .app{
+	height: 100vh;
+	background-image: linear-gradient(225deg, var(--primary-bright), var(--primary), var(--primary-shade), var(--primary-contrast));
+	background-size: 150% 150%;
+	background-position: top right;
+}
+
+.warn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/*
+Main App
+*/
+.footer{
+	position: fixed;
+	bottom: 0.5em;
+	right: 0.4em;
+}
+
+.app{
+	padding: 2em 2em 2em 2em;
+}
+.movable{
+	height: 100%;
+	width: 100%;
+	border-style: dashed;
+}
+
+.portraitBlock{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    background-color: #000D;
+    z-index: 1000;
+}
+
+.help{
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    font-size: 1.2em;
+    list-style: afar;
+}
+
+.iconI{
+    left: 0px; 
+    top: 0em;
+    float: left;
+    background-color: var(--primary-shade);
+    display: inline;
+    border-radius: 25%;
+}
+
+.mainHelp{
+    float: left;
+    padding: 1em;
+    left: 1em;
+    top: 0em;
+    padding-left: 2em;
+    background-color: var(--primary-bright)
+}
